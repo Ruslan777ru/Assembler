@@ -1,0 +1,22 @@
+1. MOV [16], 1
+
+2. MOV A, 128
+   .loop
+	MOV [A], 1
+	CMP A, 255
+	JNZ .loop
+
+3. MOV A, 230
+   .loop
+   INC A
+   CMP A, 255
+   JNZ .loop
+
+4. MOV A, 230
+   MOV C, "!"
+	.loop
+	INC A
+	MOV [A], C
+	CMP A, 255
+	JNZ .loop
+
